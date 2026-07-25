@@ -1,0 +1,22 @@
+"""
+LeetCode 217: Contains Duplicate
+Return True if any value appears more than once in the list.
+
+Approach: single pass with a hash set ("notebook").
+For each number, check if it's already in the set. If yes, a duplicate
+exists. If no, add it and keep going.
+
+Time: O(n)   Space: O(n)
+"""
+
+from typing import List
+
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        notebook = set()
+        for num in nums:
+            if num in notebook:
+                return True
+            notebook.add(num)
+        return False
