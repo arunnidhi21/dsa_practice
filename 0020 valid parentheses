@@ -1,0 +1,28 @@
+"""
+LeetCode 20: Valid Parentheses
+Given a string of just (){}[], determine if every opening bracket has a
+matching closing bracket in the correct order.
+
+Approach: use a stack. Push opening brackets. On a closing bracket,
+check it matches the top of the stack (pop if so, else invalid).
+Valid only if the stack is empty at the end.
+
+Time: O(n)   Space: O(n)
+"""
+
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        pairs = {')': '(', ']': '[', '}': '{'}
+
+        for char in s:
+            if char in pairs:
+                if stack and stack[-1] == pairs[char]:
+                    stack.pop()
+                else:
+                    return False
+            else:
+                stack.append(char)
+
+        return len(stack) == 0
