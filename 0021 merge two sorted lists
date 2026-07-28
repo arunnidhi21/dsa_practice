@@ -1,0 +1,36 @@
+"""
+LeetCode 21: Merge Two Sorted Lists
+Merge two sorted linked lists into one sorted linked list.
+
+Approach: use a dummy head node to simplify edge cases. Walk both
+lists simultaneously, always attaching the smaller front node to the
+merged list. Once one list runs out, attach the remainder of the
+other list in one step.
+
+Time: O(n + m)   Space: O(1) extra (reuses existing nodes)
+"""
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+class Solution:
+    def mergeTwoLists(self, list1, list2):
+        dummy = ListNode()
+        tail = dummy
+
+        while list1 and list2:
+            if list1.val <= list2.val:
+                tail.next = list1
+                list1 = list1.next
+            else:
+                tail.next = list2
+                list2 = list2.next
+            tail = tail.next
+
+        tail.next = list1 if list1 else list2
+
+        return dummy.next
