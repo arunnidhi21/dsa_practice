@@ -1,0 +1,28 @@
+"""
+LeetCode 70: Climbing Stairs
+You can climb 1 or 2 steps at a time. How many distinct ways to reach
+step n?
+
+Approach: dynamic programming (Fibonacci pattern). ways(n) = ways(n-1)
++ ways(n-2), since the last move to reach step n is either a 1-step
+from n-1 or a 2-step from n-2. Only the last two values need to be
+kept in memory.
+
+Time: O(n)   Space: O(1)
+"""
+
+
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        if n <= 2:
+            return n
+
+        prev2 = 1  # ways to reach step 1
+        prev1 = 2  # ways to reach step 2
+
+        for step in range(3, n + 1):
+            current = prev1 + prev2
+            prev2 = prev1
+            prev1 = current
+
+        return prev1
