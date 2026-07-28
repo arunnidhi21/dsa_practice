@@ -13,3 +13,6 @@ the fundamentals.
 | 242 | [Valid Anagram](0242-valid-anagram.py) | Hash map letter counting |
 | 20 | [Valid Parentheses](0020-valid-parentheses.py) | Stack |
 | 53 | [Maximum Subarray](0053-maximum-subarray.py) | Kadane's Algorithm (running max) |
+| 70 | [Climbing Stairs](0070-climbing-stairs.py) | Dynamic Programming (Fibonacci) |
+| 21 | [Merge Two Sorted Lists](0021-merge-two-sorted-lists.py) | Linked List |
+| 206 | [Reverse Linked List](0206-reverse-linked-list.py) | Linked List |
