@@ -1,0 +1,20 @@
+"""
+LeetCode 347: Top K Frequent Elements
+Given a list of numbers, return the k most frequently occurring ones.
+
+Approach: count how many times each number appears (hash map, same
+"notebook" idea as Two Sum), then use Python's Counter.most_common(k)
+to pull the k highest-count entries directly.
+
+Time: O(n log k)   Space: O(n)
+"""
+
+from typing import List
+from collections import Counter
+
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        counts = Counter(nums)
+        most_common = counts.most_common(k)
+        return [num for num, freq in most_common]
