@@ -16,3 +16,5 @@ the fundamentals.
 | 70 | [Climbing Stairs](0070-climbing-stairs.py) | Dynamic Programming (Fibonacci) |
 | 21 | [Merge Two Sorted Lists](0021-merge-two-sorted-lists.py) | Linked List |
 | 206 | [Reverse Linked List](0206-reverse-linked-list.py) | Linked List |
+| 49 | [Group Anagrams](group-anagrams.py) | Hash map bucketing by sorted-word key |
+| 347 | [Top K Frequent Elements](top-k-frequent-elements.py) | Frequency counting |
