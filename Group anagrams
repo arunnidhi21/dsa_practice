@@ -1,0 +1,28 @@
+"""
+LeetCode 49: Group Anagrams
+Given a list of strings, group all anagrams together.
+
+Approach: two words are anagrams if their letters, sorted, produce the
+same string. Use that sorted string as a hash map key, and bucket
+each original word under its key. At the end, the map's values are
+exactly the groups we want.
+
+Time: O(n * k log k)  where n = number of words, k = max word length
+Space: O(n * k)
+"""
+
+from typing import List
+
+
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        groups = {}
+
+        for word in strs:
+            key = ''.join(sorted(word))
+            if key in groups:
+                groups[key].append(word)
+            else:
+                groups[key] = [word]
+
+        return list(groups.values())
