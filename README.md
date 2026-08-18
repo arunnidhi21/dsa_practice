@@ -18,3 +18,6 @@ the fundamentals.
 | 206 | [Reverse Linked List](0206-reverse-linked-list.py) | Linked List |
 | 49 | [Group Anagrams](group-anagrams.py) | Hash map bucketing by sorted-word key |
 | 347 | [Top K Frequent Elements](top-k-frequent-elements.py) | Frequency counting |
+| 704 | [Binary Search](0704-binary-search.py) | Binary Search |
+| 35 | [Search Insert Position](0035-search-insert-position.py) | Binary Search |
+| 125 | [Valid Palindrome](0125-valid-palindrome.py) | Two Pointers |
