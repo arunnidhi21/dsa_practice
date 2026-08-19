@@ -21,3 +21,6 @@ the fundamentals.
 | 704 | [Binary Search](0704-binary-search.py) | Binary Search |
 | 35 | [Search Insert Position](0035-search-insert-position.py) | Binary Search |
 | 125 | [Valid Palindrome](0125-valid-palindrome.py) | Two Pointers |
+| 283 | [Move Zeroes](0283-move-zeroes.py) | Two Pointers (insert position) |
+| 977 | [Squares of a Sorted Array](0977-squares-of-a-sorted-array.py) | Two Pointers |
+| 26 | [Remove Duplicates from Sorted Array](0026-remove-duplicates-from-sorted-array.py) | Two Pointers (insert position) |
