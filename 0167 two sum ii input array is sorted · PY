@@ -1,0 +1,29 @@
+"""
+LeetCode 167: Two Sum II - Input Array Is Sorted
+Given a sorted array, find two numbers that add up to target. Return
+their 1-indexed positions.
+
+Approach: two pointers from both ends. If the sum is too small, move
+left forward for a bigger value. If too big, move right backward for
+a smaller value. Sorting is what makes this direct comparison valid.
+
+Time: O(n)   Space: O(1)
+"""
+
+from typing import List
+
+
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        left, right = 0, len(numbers) - 1
+
+        while left < right:
+            total = numbers[left] + numbers[right]
+            if total == target:
+                return [left + 1, right + 1]  # 1-indexed, as required
+            elif total < target:
+                left += 1
+            else:
+                right -= 1
+
+        return []
