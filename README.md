@@ -24,3 +24,7 @@ the fundamentals.
 | 283 | [Move Zeroes](0283-move-zeroes.py) | Two Pointers (insert position) |
 | 977 | [Squares of a Sorted Array](0977-squares-of-a-sorted-array.py) | Two Pointers |
 | 26 | [Remove Duplicates from Sorted Array](0026-remove-duplicates-from-sorted-array.py) | Two Pointers (insert position) |
+| 11 | [Container With Most Water](0011-container-with-most-water.py) | Two Pointers |
+| 167 | [Two Sum II - Input Array Is Sorted](0167-two-sum-ii-input-array-is-sorted.py) | Two Pointers |
+| 75 | [Sort Colors](0075-sort-colors.py) | Dutch National Flag |
+| 42 | [Trapping Rain Water](0042-trapping-rain-water.py) | Two Pointers |
