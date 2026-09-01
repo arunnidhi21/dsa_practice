@@ -1,0 +1,30 @@
+"""
+LeetCode 75: Sort Colors
+Given an array of only 0s, 1s, and 2s, sort it in-place in one pass.
+
+Approach: Dutch National Flag algorithm. Three pointers: `low` marks
+the boundary for 0s, `high` marks the boundary for 2s, `mid` scans
+through. Swap 0s to the front, leave 1s in place, swap 2s to the back
+(without advancing mid on a 2-swap, since the swapped-in value from
+the back hasn't been checked yet).
+
+Time: O(n)   Space: O(1)
+"""
+
+from typing import List
+
+
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        low, mid, high = 0, 0, len(nums) - 1
+
+        while mid <= high:
+            if nums[mid] == 0:
+                nums[low], nums[mid] = nums[mid], nums[low]
+                low += 1
+                mid += 1
+            elif nums[mid] == 1:
+                mid += 1
+            else:
+                nums[mid], nums[high] = nums[high], nums[mid]
+                high -= 1
